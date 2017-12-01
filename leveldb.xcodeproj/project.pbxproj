@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C30A2241FD217EB00B2991A /* leveldb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216828F1B2668F500561211 /* leveldb.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		921682871B25C1A300561211 /* leveldb_ios_tests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 921682861B25C1A300561211 /* leveldb_ios_tests.mm */; };
 		921682881B25C1A300561211 /* leveldb.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9295C9951B2591EA00C388EB /* leveldb.framework */; };
 		921682911B2668F500561211 /* leveldb.h in Headers */ = {isa = PBXBuildFile; fileRef = 9216828F1B2668F500561211 /* leveldb.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +117,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8C30A21C1FD217BC00B2991A /* leveldb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = leveldb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		921682821B25C1A300561211 /* leveldb-ios-tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "leveldb-ios-tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		921682851B25C1A300561211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		921682861B25C1A300561211 /* leveldb_ios_tests.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = leveldb_ios_tests.mm; sourceTree = "<group>"; };
@@ -218,6 +220,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8C30A2181FD217BC00B2991A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9216827F1B25C1A300561211 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +448,7 @@
 			children = (
 				9295C9951B2591EA00C388EB /* leveldb.framework */,
 				921682821B25C1A300561211 /* leveldb-ios-tests.xctest */,
+				8C30A21C1FD217BC00B2991A /* leveldb.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -446,6 +456,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		8C30A2191FD217BC00B2991A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C30A2241FD217EB00B2991A /* leveldb.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9295C9921B2591EA00C388EB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +527,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8C30A21B1FD217BC00B2991A /* leveldb macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C30A2211FD217BC00B2991A /* Build configuration list for PBXNativeTarget "leveldb macOS" */;
+			buildPhases = (
+				8C30A2171FD217BC00B2991A /* Sources */,
+				8C30A2181FD217BC00B2991A /* Frameworks */,
+				8C30A2191FD217BC00B2991A /* Headers */,
+				8C30A21A1FD217BC00B2991A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "leveldb macOS";
+			productName = "leveldb macOS";
+			productReference = 8C30A21C1FD217BC00B2991A /* leveldb.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		921682811B25C1A300561211 /* leveldb-ios-tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9216828D1B25C1A300561211 /* Build configuration list for PBXNativeTarget "leveldb-ios-tests" */;
@@ -527,9 +563,9 @@
 			productReference = 921682821B25C1A300561211 /* leveldb-ios-tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9295C9941B2591EA00C388EB /* leveldb */ = {
+		9295C9941B2591EA00C388EB /* leveldb iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9295C9AB1B2591EA00C388EB /* Build configuration list for PBXNativeTarget "leveldb" */;
+			buildConfigurationList = 9295C9AB1B2591EA00C388EB /* Build configuration list for PBXNativeTarget "leveldb iOS" */;
 			buildPhases = (
 				9295C9901B2591EA00C388EB /* Sources */,
 				9295C9911B2591EA00C388EB /* Frameworks */,
@@ -540,7 +576,7 @@
 			);
 			dependencies = (
 			);
-			name = leveldb;
+			name = "leveldb iOS";
 			productName = leveldb;
 			productReference = 9295C9951B2591EA00C388EB /* leveldb.framework */;
 			productType = "com.apple.product-type.framework";
@@ -551,9 +587,14 @@
 		9295C98C1B2591EA00C388EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = com.google;
 				TargetAttributes = {
+					8C30A21B1FD217BC00B2991A = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = Z957FUF6L7;
+						ProvisioningStyle = Automatic;
+					};
 					921682811B25C1A300561211 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -574,13 +615,21 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9295C9941B2591EA00C388EB /* leveldb */,
+				9295C9941B2591EA00C388EB /* leveldb iOS */,
 				921682811B25C1A300561211 /* leveldb-ios-tests */,
+				8C30A21B1FD217BC00B2991A /* leveldb macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8C30A21A1FD217BC00B2991A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		921682801B25C1A300561211 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -598,6 +647,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8C30A2171FD217BC00B2991A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9216827E1B25C1A300561211 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -659,12 +715,78 @@
 /* Begin PBXTargetDependency section */
 		9216828A1B25C1A300561211 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9295C9941B2591EA00C388EB /* leveldb */;
+			target = 9295C9941B2591EA00C388EB /* leveldb iOS */;
 			targetProxy = 921682891B25C1A300561211 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		8C30A2221FD217BC00B2991A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z957FUF6L7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/leveldb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.leveldb-macOS";
+				PRODUCT_NAME = leveldb;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		8C30A2231FD217BC00B2991A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Z957FUF6L7;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "$(SRCROOT)/leveldb/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.leveldb-macOS";
+				PRODUCT_NAME = leveldb;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		9216828B1B25C1A300561211 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -678,6 +800,7 @@
 				);
 				INFOPLIST_FILE = "leveldb-ios-tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -691,6 +814,7 @@
 				);
 				INFOPLIST_FILE = "leveldb-ios-tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -703,13 +827,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -717,6 +849,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -732,7 +865,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -750,13 +883,21 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -773,7 +914,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -787,6 +928,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -803,9 +945,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/leveldb/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.leveldb-iOS";
+				PRODUCT_NAME = leveldb;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -815,6 +958,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -831,9 +975,10 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/leveldb/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.google.leveldb-iOS";
+				PRODUCT_NAME = leveldb;
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
@@ -842,6 +987,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8C30A2211FD217BC00B2991A /* Build configuration list for PBXNativeTarget "leveldb macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C30A2221FD217BC00B2991A /* Debug */,
+				8C30A2231FD217BC00B2991A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9216828D1B25C1A300561211 /* Build configuration list for PBXNativeTarget "leveldb-ios-tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -860,7 +1014,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9295C9AB1B2591EA00C388EB /* Build configuration list for PBXNativeTarget "leveldb" */ = {
+		9295C9AB1B2591EA00C388EB /* Build configuration list for PBXNativeTarget "leveldb iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9295C9AC1B2591EA00C388EB /* Debug */,
